@@ -6,7 +6,7 @@ import tkdn from "../assets/shop/tkdn.webp";
 import Jumbotron from "../components/Jumbotron";
 import pengalamanone from "../assets/pengalaman/pengalamanone.webp";
 import pengalamantwo from "../assets/pengalaman/pengalamantwo.webp";
-import { useKeenSlider } from "keen-slider/react";
+
 const produkList = [
   {
     image: "https://picsum.photos/id/1/200/300",
@@ -30,21 +30,6 @@ const produkList = [
   },
 ];
 const Home = () => {
-  const [sliderRef] = useKeenSlider({
-    loop: true,
-    slides: {
-      perView: 1,
-      spacing: 15,
-    },
-    breakpoints: {
-      "(min-width: 640px)": {
-        slides: { perView: 2, spacing: 20 },
-      },
-      "(min-width: 1024px)": {
-        slides: { perView: 3, spacing: 25 },
-      },
-    },
-  });
   return (
     <div className="">
       <Jumbotron />
@@ -141,15 +126,20 @@ const Home = () => {
       </section>
       <section>
         <div className="">
-          <h2>
-            Didukung oleh tim profesional dan pengalaman lebih dari dua dekade,
-            kami telah dipercaya menangani berbagai pengadaan barang untuk klien
-            seperti Dinas Pemerintah Daerah, Lembaga Pendidikan, dan Korporasi
-            Swasta di seluruh Indonesia.
-          </h2>
+          <h2 className=""></h2>
         </div>
-        <div className="">
-          
+        <div className="max-w-full  bg-slate-600 sm:flex flex-wrap items-center space-x-3 maz ">
+          {produkList.map((e, index) => (
+            <div key={index}>
+              <div className="max-w-full bg-slate-300">
+                <img className="w-[500px]" src={e.image} alt="" />
+                <div className="text-center font-medium text-sm text-gray-400">
+                  <p className="">{e.title}</p>
+                  <p>{e.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
