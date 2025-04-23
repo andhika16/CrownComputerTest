@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import CustomerServiceCard from "./components/CustomerServiceCard";
 import Home from "./pages/Home";
 import Tentang from "./pages/Tentang";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route path="/tentang" element={<Tentang />} />
         </Routes>
       </main>
-
+      <Footer />
       <CustomerServiceCard />
     </Router>
   );
