@@ -39,7 +39,7 @@ export default function CustomerServiceCard() {
         </p>
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-2 right-2 bg-red-500"
+          className="absolute top-2 -right-0 "
         >
           <X size={20} color="#fff" />
         </button>

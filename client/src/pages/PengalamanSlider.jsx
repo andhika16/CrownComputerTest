@@ -1,43 +1,60 @@
 import { useKeenSlider } from "keen-slider/react";
+import { Gallery, Item } from "react-photoswipe-gallery";
 import "keen-slider/keen-slider.min.css";
+import "photoswipe/dist/photoswipe.css";
 
-import { data } from "../assets/products/data";
+const proyek = {
+  title: "Pengadaan & Instalasi Genset",
+  desc: "CV. Kencana Surya dipercaya untuk menyediakan dan menginstal genset berkualitas tinggi untuk mendukung kelistrikan gedung pemerintahan. Proses mulai dari pengiriman, instalasi, hingga uji coba dilakukan oleh tim teknis profesional.",
+  images: [
+    "https://via.placeholder.com/600x400?text=Genset+1",
+    "https://via.placeholder.com/600x400?text=Genset+2",
+    "https://via.placeholder.com/600x400?text=Genset+3",
+    "https://via.placeholder.com/600x400?text=Genset+4",
+  ],
+};
 
-export default function ExperienceSlider() {
+export default function GaleriPengalaman() {
   const [sliderRef] = useKeenSlider({
     loop: true,
-    mode: "snap",
     slides: {
       perView: 1,
-      spacing: 24,
+      spacing: 12,
     },
   });
 
   return (
-    <section className="py-16 px-4 ">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
-          Bukti Pengalaman Kami
-        </h2>
-        <div ref={sliderRef} className="keen-slider w-full">
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className="keen-slider__slide flex flex-col md:flex-row items-center   overflow-hidden shadow-md"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full md:w-1/2 object-contain  h-80 "
-              />
-              <div className="p-6 md:w-1/2 text-left">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600">{item.desc}</p>
+    <section className="py-16 px-4 bg-white">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        {/* Slider Foto */}
+        <Gallery>
+          <div ref={sliderRef} className="keen-slider md:w-1/2 w-full">
+            {proyek.images.map((img, i) => (
+              <div key={i} className="keen-slider__slide">
+                <Item original={img} thumbnail={img} width="1200" height="800">
+                  {({ ref, open }) => (
+                    <img
+                      ref={ref}
+                      onClick={open}
+                      src={img}
+                      alt={`Foto ${i + 1}`}
+                      className="rounded-lg cursor-pointer object-cover w-full h-64 sm:h-80 shadow"
+                    />
+                  )}
+                </Item>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </Gallery>
+
+        {/* Caption Tetap */}
+        <div className="md:w-1/2">
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            {proyek.title}
+          </h3>
+          <p className="text-gray-600 text-base leading-relaxed">
+            {proyek.desc}
+          </p>
         </div>
       </div>
     </section>

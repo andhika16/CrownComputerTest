@@ -39,7 +39,7 @@ const Header = () => {
               <Link
                 to="/"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-blue-600"
+                className="text-primary hover:text-secondary"
               >
                 Beranda
               </Link>
@@ -48,7 +48,7 @@ const Header = () => {
               <Link
                 to="/tentang"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-blue-600"
+                className="text-primary hover:text-secondary"
               >
                 Tentang
               </Link>
@@ -57,7 +57,7 @@ const Header = () => {
               <Link
                 to="/produk"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-blue-600"
+                className="text-primary hover:text-secondary"
               >
                 Produk
               </Link>
@@ -66,7 +66,7 @@ const Header = () => {
               <Link
                 to="/pengalaman"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-blue-600"
+                className="text-primary hover:text-secondary"
               >
                 Pengalaman
               </Link>

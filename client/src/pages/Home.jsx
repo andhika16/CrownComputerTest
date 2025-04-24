@@ -85,7 +85,7 @@ const Home = () => {
             {produkList.map((e, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-80 h-auto  overflow-hidden shadow-md"
+                className="flex-shrink-0 w-52 sm:w-80 h-64 sm:h-auto  overflow-hidden shadow-md"
               >
                 <img
                   src={e.image}
