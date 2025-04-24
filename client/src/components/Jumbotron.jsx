@@ -13,7 +13,7 @@ const slides = [
   {
     image: slide2,
     title: "Pengadaan IT Mudah dan Efisien",
-    description: "Kami hadir sebagai mitra andalan Anda sejak 2002.",
+    description: "Kami hadir sebagai mitra andalan Anda sejak  1998.",
   },
   {
     image: slide3,
@@ -58,8 +58,9 @@ export default function Jumbotron() {
       />
       <div className="container">
         {/* Overlay content */}
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start px-10 md:px-20 text-white">
-          <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
+        <div className="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-start px-10 md:px-20 text-white">
+          <h2 className="text-5xl  font-bold mb-4">{slide.title}</h2>
+          
           <p className="text-lg mb-6 max-w-xl">{slide.description}</p>
         </div>
 

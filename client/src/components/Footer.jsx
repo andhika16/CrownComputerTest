@@ -2,11 +2,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-200 text-gray-700 py-10 mt-10">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="bg-slate-100 text-gray-700 pt-20 mt-10">
+      <div className="max-w-6xl  mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div>
-          <h3 className="text-xl font-bold mb-2">CV. Kencana Surya</h3>
+          <h3 className="text-2xl font-bold mb-2">CV. Kencana Surya</h3>
           <p className="text-sm text-gray-800">
             Penyedia produk elektronik terpercaya untuk berbagai proyek
             pemerintahan dan swasta di Indonesia.
@@ -44,7 +44,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-2">Kontak</h4>
           <ul className="space-y-1 text-sm text-gray-500">
-            <li>📍 Jakarta, Indonesia</li>
+            <li>📍 Surabaya, Indonesia</li>
             <li>📞 0812-3456-7890</li>
             <li>✉️ info@kencanasurya.co.id</li>
           </ul>
@@ -68,7 +68,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-700">
+      <div className="mt-10   py-4 text-center text-sm text-gray-400">
         © {new Date().getFullYear()} CV. Kencana Surya. All rights reserved.
       </div>
     </footer>

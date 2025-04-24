@@ -20,7 +20,7 @@ export default function CustomerServiceCard() {
       <>
         <button
           onClick={() => setOpen(true)}
-          className="fixed flex items-center space-x-2 rounded-full bottom-10 right-10 p-2 bg-red-600 border border-white"
+          className="fixed flex items-center space-x-2 rounded-full bottom-10 right-10 p-2 bg-primary border border-white"
         >
           <PhoneCallIcon size={15} color="#fff" />
           <p className="sm:block hidden font-medium text-white text-md">
@@ -32,7 +32,7 @@ export default function CustomerServiceCard() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-xs shadow-lg rounded-xl overflow-hidden">
-      <div className="bg-red-600 text-white px-4 py-2 text-sm">
+      <div className="bg-primary text-white px-4 py-2 text-sm">
         <p>
           WA/ Telpon. Supplier IT terpercaya. Konsultasi Gratis! Hubungi
           Sekarang!
@@ -59,7 +59,7 @@ export default function CustomerServiceCard() {
           href="https://wa.me/6285231198475"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-600 hover:text-red-800"
+          className="text-primary hover:text-red-800"
         >
           <PhoneCallIcon size={20} />
         </a>
@@ -79,7 +79,7 @@ export default function CustomerServiceCard() {
           href="https://wa.me/6285231198475"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-600 hover:text-red-800"
+          className="text-primary hover:text-red-800"
         >
           <PhoneCallIcon size={20} />
         </a>
