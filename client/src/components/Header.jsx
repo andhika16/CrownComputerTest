@@ -8,9 +8,9 @@ const Header = () => {
     setMenuOpen(false);
   };
   return (
-    <div className="max-w-5xl mx-auto bg-white ">
-      <header className="border-b">
-        <nav className="container p-2 sm:p-0 flex  items-end sm:items-end justify-between mx-auto px">
+    <div className="border-b ">
+      <header className="max-w-5xl mx-auto">
+        <nav className=" p-2 sm:p-0 flex  items-end sm:items-end justify-between mx-auto px">
           {/* Logo & Brand */}
           <Link to="/" >
             <span className="text-md sm:text-xl  font-serif  text-primary uppercase  tracking-wide">
@@ -33,7 +33,7 @@ const Header = () => {
           </button>
 
           <ul
-            className={`flex-col z-50 md:flex-row md:flex space-y-3 md:space-y-0 md:space-x-3 text-sm md:text-base text-slate-900 font-serif absolute md:static top-[64px] left-0 w-full md:w-auto bg-white md:bg-transparent p-5 md:p-0 shadow md:shadow-none transition-all duration-300 ${
+            className={`flex-col z-50 md:flex-row md:flex space-y-3 md:space-y-0 md:space-x-3 text-sm md:text-base text-slate-900 font-serif absolute md:static top-[64px] left-0 w-full md:w-auto bg-white md:bg-transparent md:p-0 shadow md:shadow-none transition-all duration-300 ${
               menuOpen ? "flex" : "hidden"
             }`}
           >
