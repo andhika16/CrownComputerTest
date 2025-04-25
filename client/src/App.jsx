@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tentang" element={<Tentang />} />
-        <Route path="/produk" element={<RuangLingkupSection />} />
+          <Route path="/produk" element={<RuangLingkupSection />} />
           <Route path="/pengalaman" element={<PengalamanSlider />} />
         </Routes>
       </main>

@@ -4,13 +4,14 @@ import inaproc from "../assets/shop/inaproc.webp";
 import padiumkm from "../assets/shop/padiumkm.png";
 import tkdn from "../assets/shop/tkdn.webp";
 import Jumbotron from "../components/Jumbotron";
-import pengalamanone from "../assets/pengalaman/pengalamanone.webp";
-import pengalamantwo from "../assets/pengalaman/pengalamantwo.webp";
+import PengalamanSlider from "./PengalamanSlider";
 import { produkList } from "../assets/testimon/data";
 import { dataClient } from "../assets/clients/data";
-import { keunggulan, dataTrust } from "../assets/trust/data";
+import { keunggulan } from "../assets/trust/data";
 import logo from "../assets/shop/logo.png";
 import WAForm from "../components/WAForm";
+import { Gallery, Item } from "react-photoswipe-gallery";
+
 const Home = () => {
   return (
     <div className="">
@@ -32,9 +33,9 @@ const Home = () => {
           layanan yang memuaskan.
         </p>
       </div>
-      <section className="sm:py-8 ">
-        <div className="max-w-6xl mx-auto px-4 ">
-          <h2 className="text-xl sm:text-3xl  font-medium text-gray-700 text-center mb-2">
+      <section className="sm:py-8">
+        <div className="max-w-6xl mx-auto ">
+          <h2 className="text-xl sm:text-3xl  font-medium text-black text-center mb-2">
             Tersedia Pembelian Melalui
           </h2>
           <ul className="grid grid-cols-2 sm:flex items-center justify-between gap-2 sm:gap-10">
@@ -81,25 +82,40 @@ const Home = () => {
           </p>
         </div>
         <div className="overflow-x-auto whitespace-nowrap scroll-smooth px-4">
-          <div className="inline-flex gap-4">
-            {produkList.map((e, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-52 sm:w-80 h-64 sm:h-auto  overflow-hidden shadow-md"
-              >
-                <img
-                  src={e.image}
-                  alt={`produk-${index}`}
-                  className="w-full h-[400px] object-cover"
-                />
+          <Gallery>
+            <div className="overflow-x-auto whitespace-nowrap scroll-smooth px-4">
+              <div className="inline-flex gap-4">
+                {produkList.map((e, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-52 sm:w-80 h-64 sm:h-auto overflow-hidden"
+                  >
+                    <Item
+                      original={e.image}
+                      thumbnail={e.image}
+                      width="1200"
+                      height="800"
+                    >
+                      {({ ref, open }) => (
+                        <img
+                          ref={ref}
+                          onClick={open}
+                          src={e.image}
+                          alt={`produk-${index}`}
+                          className="w-full h-[400px] object-cover cursor-pointer hover:opacity-80 transition"
+                        />
+                      )}
+                    </Item>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          </Gallery>
         </div>
       </section>
-      <section className="pt-12 px-4 ">
+      <section className="pt-6 ">
         <div className="max-w-5xl mx-auto text-center mb-10">
-          <h2 className="text-2xl  capitalize sm:text-3xl md:text-4xl font-bold text-gray-700 leading-snug">
+          <h2 className="text-2xl  capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug">
             Pengalaman Kami telah melayani pengadaan alat kantor & teknologi
             informasi sejak 2002
           </h2>
@@ -109,28 +125,14 @@ const Home = () => {
             Indonesia.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <div className="overflow-hidden  transition">
-            <img
-              src={pengalamanone}
-              alt="pengalaman1"
-              className="w-full h-auto object-cover hover:scale-105 transition duration-300"
-            />
-          </div>
-          <div className="overflow-hidden  transition">
-            <img
-              src={pengalamantwo}
-              alt="pengalaman2"
-              className="w-full h-auto object-cover hover:scale-105 transition duration-300"
-            />
-          </div>
+        <div className="">
+          <PengalamanSlider />
         </div>
       </section>
       <section className="py-3">
         <div className="py-12">
           <div className="text-center mb-6">
-            <h2 className="text-2xl sm:text-3xl capitalize md:text-4xl font-bold text-gray-700 leading-snug">
+            <h2 className="text-2xl sm:text-3xl capitalize md:text-4xl font-bold text-black leading-snug">
               CV.Kencana Surya telah dipercaya oleh berbagai client
             </h2>
             <p className="text-gray-500 text-md font-serif mt-6">
@@ -155,7 +157,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="text-gray-700 font-serif text-md  text-center leading-2 mb-10">
+        <div className="text-black font-serif text-md  text-center leading-2 mb-10">
           <p>
             ratusan lembaga pemerintah dan perusahaan swasta telah mempercayakan
             pengadaan alat-alat kantor mereka kepada perusahaan kami. Kami
@@ -171,11 +173,11 @@ const Home = () => {
       </section>
       <section className="bg-white border-t  border-black px-4">
         <div className="py-12 bg-white">
-          <h2 className="text-2xl md:text-3xl text-gray-800 font-bold text-center mb-8">
+          <h2 className="text-2xl  capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug text-center">
             Kenapa Banyak Yang Memilih Kami
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 mt-6 justify-items-center">
             {keunggulan.map((item, index) => (
               <div
                 key={index}
@@ -193,10 +195,10 @@ const Home = () => {
       <section>
         <div className="border-t border-black pt-12">
           <div className="text-center mb-12 px-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
+            <h2 className="text-2xl text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug">
               Apa Kata Klien Kami
             </h2>
-            <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
+            <p className="text-gray-600 font-serif   mt-3 max-w-2xl mx-auto">
               Berikut ini adalah testimoni dari berbagai perusahaan dan klien
               yang telah mempercayakan kebutuhan kantor mereka kepada kami.
             </p>
@@ -223,14 +225,14 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="py-12 px-4 text-center">
+      <section className="py-12 bg-gray-100 sm:mt-6  px-4 text-center">
         <div className=" mx-auto">
           <h2 className="text-2xl md:text-3xl font-extrabold  leading-tight mb-4">
             Anda butuh alat elektronik atau sistem informasi untuk lembaga anda
             Dan Mau PROMO DISKON BESAR? WA Sekarang! Kesempatan tidak datang 2
             kali!
           </h2>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 font-serif mb-4">
             Sampaikan kebutuhan alat elektronik Anda kepada Marketing Executive
             Kami melalui WhatsApp atau telpon. Marketing Kami merupakan orang
             yang ahli di bidang pengadaan alat elektronik. Pastikan bertanya ke
@@ -240,7 +242,7 @@ const Home = () => {
             akan melayani Anda dengan sabar. Tersedia pembelian melalui{" "}
             <strong>E Katalog bersertifikat TKDN</strong>.
           </p>
-          <p className="text-gray-700 font-medium mb-6">
+          <p className="text-gray-600 font-serif mb-6">
             Anda hanya perlu telpon/WA untuk melakukan transaksi. Team Kami
             pasti membantu Anda untuk prosesnya. Dijamin Mudah HARGA TERMURAH.
             Selanjutnya Kami kirim dan pasang sampai ke lokasi Anda. Anda duduk

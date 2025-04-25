@@ -58,7 +58,7 @@ export default function Jumbotron() {
       />
       <div className="container">
         {/* Overlay content */}
-        <div className="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-start px-10 md:px-20 text-white">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-10 md:px-20 text-white">
           <h2 className="text-5xl  font-bold mb-4">{slide.title}</h2>
           
           <p className="text-lg mb-6 max-w-xl">{slide.description}</p>

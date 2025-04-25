@@ -8,7 +8,7 @@ const Header = () => {
     setMenuOpen(false);
   };
   return (
-    <div className="container mx-auto">
+    <div className="container bg-white mx-auto ">
       <header className="border-b">
         <nav className="container mx-auto px-2 flex items-center justify-between">
           {/* Logo & Brand */}

@@ -5,8 +5,13 @@ import empat from "./test.jpg";
 
 export const data = [
   {
-    title: "Instalasi Genset",
-    desc: "Pengadaan & pemasangan genset silent untuk rumah sakit dan gedung pemerintahan.",
+    title: "Instalasi Genset kantor bpkbd",
+    desc: "Pengadaan & pemasangan genset silent untuk rumah sakit dan gedung bpkpb kalimantan timur.",
+    images: [satu, dua, tiga, empat],
+  },
+  {
+    title: "Instalasi Genset kantor bpkbd",
+    desc: "Pengadaan & pemasangan genset silent untuk rumah sakit dan gedung bpkpb kalimantan timur.",
     images: [satu, dua, tiga, empat],
   },
 ];
