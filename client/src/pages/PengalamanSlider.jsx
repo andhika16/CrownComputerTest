@@ -17,10 +17,10 @@ export default function PengalamanSlider() {
     <>
       {data.map((item, index) => (
         <section key={index} className="py-6 px-4 bg-white">
-          <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center">
             {/* Slider Foto */}
             <Gallery>
-              <div ref={sliderRef} className="keen-slider md:w-1/2 w-full">
+              <div ref={sliderRef} className="keen-slider w-full">
                 {item.images.map((img, i) => (
                   <div key={i} className="keen-slider__slide">
                     <Item

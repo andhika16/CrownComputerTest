@@ -20,7 +20,7 @@ export default function CustomerServiceCard() {
       <>
         <button
           onClick={() => setOpen(true)}
-          className="fixed flex items-center space-x-2 rounded-full bottom-10 right-10 p-2 bg-primary border border-white"
+          className="fixed flex items-center space-x-2 rounded-full bottom-10 right-10 p-2 bg-green-600 border border-white"
         >
           <PhoneCallIcon size={15} color="#fff" />
           <p className="sm:block hidden font-medium text-white text-md">

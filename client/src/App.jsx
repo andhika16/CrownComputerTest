@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="container mx-auto py-8">
+      <main className="mx-auto  py-8">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tentang" element={<Tentang />} />
