@@ -53,7 +53,8 @@ export default function Jumbotron() {
     >
       <img
         src={slide.image}
-        alt=""
+        alt={slide.title}
+        loading="lazy"
         className="w-full h-full object-cover transition-all duration-500"
       />
       <div className="max-w-4xl mx-auto">

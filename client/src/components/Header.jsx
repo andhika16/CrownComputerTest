@@ -38,7 +38,7 @@ const Header = () => {
             }`}
           >
             <li>
-              <Link
+            <Link
                 to="/"
                 onClick={handleLinkClick}
                 className="text-primary hover:text-secondary"
