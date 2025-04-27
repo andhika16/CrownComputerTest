@@ -13,11 +13,11 @@ const Header = () => {
         <nav className=" p-2 sm:p-0 flex  items-end sm:items-end justify-between mx-auto px">
           {/* Logo & Brand */}
           <Link to="/" >
-            <span className="text-md sm:text-xl  font-serif  text-primary uppercase  tracking-wide">
+            <span className="sm:block hidden text-md sm:text-xl  font-serif  text-primary uppercase  ">
               Kencana Surya
             </span>
           </Link>
-          <div className="sm:block hidden">
+          <div >  
             <img
               src={logo}
               alt="Kencana Surya Logo"
@@ -70,7 +70,7 @@ const Header = () => {
                 onClick={handleLinkClick}
                 className="text-primary hover:text-secondary"
               >
-                Pengalaman
+                Pemasangan
               </Link>
             </li>
           </ul>

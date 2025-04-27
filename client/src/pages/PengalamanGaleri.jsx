@@ -4,42 +4,42 @@ import { data } from "../assets/products/data";
 
 export default function PengalamanGaleri() {
   return (
-    <section className="py-6 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {data.map((item, index) => (
-          <div key={index} className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 text-base leading-relaxed mb-4">
-              {item.desc}
-            </p>
+    <section>
+      <div className="mx-auto sm:px-0 overflow-x-auto">
+        <Gallery>
+          {/* Bungkus grid di dalam container inline-flex */}
+          <div className="grid grid-cols-3 gap-4 min-w-[600px] sm:min-w-0">
+            {produkList.map((e, index) => (
+              <div
+                key={index}
+                className="overflow-hidden hover:shadow-lg transition relative"
+              >
+                {/* Caption di bawah gambar */}
+                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center text-sm font-semibold py-2">
+                  {e.caption}
+                </div>
 
-            <Gallery>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {item.images.map((img, i) => (
-                  <Item
-                    key={i}
-                    original={img}
-                    thumbnail={img}
-                    width="1000"
-                    height="800"
-                  >
-                    {({ ref, open }) => (
+                <Item
+                  original={e.image}
+                  thumbnail={e.image}
+                  width="1200"
+                  height="800"
+                >
+                  {({ ref, open }) => (
+                    <div className="cursor-pointer" onClick={open}>
                       <img
                         ref={ref}
-                        onClick={open}
-                        src={img}
-                        alt={`Foto ${i + 1}`}
-                        className="rounded-lg cursor-pointer object-cover w-full h-32 sm:h-40 md:h-48 shadow"
+                        src={e.image}
+                        alt={`produk-${index}`}
+                        className="w-full h-48 object-cover"
                       />
-                    )}
-                  </Item>
-                ))}
+                    </div>
+                  )}
+                </Item>
               </div>
-            </Gallery>
+            ))}
           </div>
-        ))}
+        </Gallery>
       </div>
     </section>
   );

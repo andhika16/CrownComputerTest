@@ -1,11 +1,10 @@
 // components/CustomerServiceCard.jsx
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import { X, PhoneCallIcon } from "lucide-react";
 import cs1 from "../assets/profilecs/cs1.jpg";
 import cs2 from "../assets/profilecs/cs2.svg";
 export default function CustomerServiceCard() {
   const [open, setOpen] = useState(false);
-
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,14 +31,11 @@ export default function CustomerServiceCard() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-xs shadow-lg rounded-xl overflow-hidden">
-      <div className="bg-primary text-white px-4 py-2 text-sm">
-        <p>
-          WA/ Telpon. Supplier IT terpercaya. Konsultasi Gratis! Hubungi
-          Sekarang!
-        </p>
+      <div className="bg-primary text-white px-6 py-4 text-sm">
+        <p>Konsultasi Gratis! Hubungi Sekarang!</p>
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-2 -right-0 "
+          className="absolute top-4 -right-0 "
         >
           <X size={20} color="#fff" />
         </button>
@@ -52,7 +48,7 @@ export default function CustomerServiceCard() {
         />
         <div className="flex-1">
           <div className="font-semibold">Rohul</div>
-          <div className="text-sm text-gray-500">Marketing Specialist</div>
+          <div className="text-sm text-gray-500">online</div>
           <div className="text-red-500 text-xs">Available</div>
         </div>
         <a
@@ -72,7 +68,7 @@ export default function CustomerServiceCard() {
         />
         <div className="flex-1">
           <div className="font-semibold">Novie</div>
-          <div className="text-sm text-gray-500">Marketing Specialist</div>
+          <div className="text-sm text-gray-500">online</div>
           <div className="text-red-500 text-xs">Available</div>
         </div>
         <a

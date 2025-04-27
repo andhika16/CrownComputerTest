@@ -1,29 +1,24 @@
 import React from "react";
-import mbiz from "../assets/shop/mbiz.jpeg";
-import inaproc from "../assets/shop/inaproc.webp";
-import padiumkm from "../assets/shop/padiumkm.png";
-import tkdn from "../assets/shop/tkdn.webp";
 import Jumbotron from "../components/Jumbotron";
-import PengalamanSlider from "./PengalamanSlider";
 import { produkList } from "../assets/testimon/data";
 import { dataClient } from "../assets/clients/data";
 import { keunggulan } from "../assets/trust/data";
 import logo from "../assets/shop/logo.png";
 import WAForm from "../components/WAForm";
 import { Gallery, Item } from "react-photoswipe-gallery";
-import PengalamanGaleri from "./PengalamanGaleri";
+import { logoStore } from "../assets/shop/data";
 
 const Home = () => {
   return (
     <div className="">
       <Jumbotron />
 
-      <section className="sm:py-8 px-2">
-        <div className="max-w-5xl mx-auto mb-6 sm:py-6 animate-fadeInUp">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold font-sans text-gray-900 mb-6 leading-snug">
+      <section className="sm:my-6 my-12 sm:px-0 px-4">
+        <div className="max-w-5xl mx-auto mb-6 sm:py-6 ">
+          <h2 className=" text-3xl sm:text-4xl md:text-5xl text-center   font-bold font-serif text-black mb-6 leading-snug">
             Jasa Pengadaan alat elektronik dan sistem informasi
           </h2>
-          <p className="max-w-full sm:text-[1em] text-sm  text-black leading-relaxed font-outfit text-justify">
+          <p className="sm:text-[1em] text-sm  text-black tracking-wide   sm:leading-relaxed font-serif text-justify">
             penyedia solusi pengadaan IT lengkap untuk berbagai{" "}
             <span className="font-bold">instansi pemerintah</span> dan{" "}
             <span className="font-bold">korporat</span>. Mulai dari perangkat
@@ -36,57 +31,21 @@ const Home = () => {
             layanan yang memuaskan.
           </p>
         </div>
-
-        <div className="max-w-5xl mx-auto animate-fadeInUp delay-200">
-          <h2 className="text-xl sm:text-3xl font-medium text-black text-center mb-2">
-            Tersedia Pembelian Melalui
-          </h2>
-          <ul className="grid grid-cols-2 sm:flex items-center justify-between gap-2 sm:gap-10">
-            <li>
-              <img className="w-28 sm:w-36 mx-auto" src={mbiz} alt="mbiz" />
-            </li>
-            <li>
-              <img
-                className="w-28 sm:w-36 mx-auto"
-                src={inaproc}
-                alt="inaproc"
-              />
-            </li>
-            <li>
-              <img
-                className="w-28 sm:w-36 mx-auto"
-                src={padiumkm}
-                alt="padiumkm"
-              />
-            </li>
-            <li>
-              <img className="w-28 sm:w-36 mx-auto" src={tkdn} alt="tkdn" />
-            </li>
-          </ul>
-        </div>
       </section>
-      <section>
-        <div className="max-w-full flex justify-center sm:mt-24 mt-16 md:mt-6   ">
-          <div className="">
-            <img className="w-36 mx-auto" src={logo} alt={logo} />
-            {/* <p className="text-gray-600 font-outfit text-lg">
-                CV.Kencana Surya
-              </p> */}
-            <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-2xl font-sans capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
-                Pengalaman Kami telah melayani pengadaan alat kantor & teknologi
-                informasi sejak 2002
-              </h2>
-              {/* <p className="mt-4 font-outfit text-gray-600 text-sm sm:text-base max-w-2xl mx-auto ">
-            Dengan pengalaman lebih dari dua dekade, kami telah dipercaya oleh
-            berbagai instansi pemerintah dan perusahaan swasta di berbagai
-            Indonesia.
-          </p> */}
+      <section className="max-w-5xl mx-auto sm:px-0 px-4">
+        <div className="flex justify-center  ">
+          <div className="mx-auto">
+            <div className="">
+              <img className="sm:w-64 w-48  mx-auto" src={logo} alt={logo} />
             </div>
+            <h2 className="text-2xl font-serif  text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
+              Pengalaman Kami telah melayani pengadaan alat kantor & teknologi
+              informasi sejak 1998
+            </h2>
           </div>
         </div>
-        <div className="max-w-5xl mx-auto text-center my-2">
-          <p className=" sm:text-[1em] text-sm font-outfit  text-black leading-relaxed text-justify mx-auto px-2">
+        <div className="mx-auto text-center mb-6 mt-6">
+          <p className="sm:text-[1em] text-sm  text-black tracking-wide  leading-relaxed font-serif text-justify">
             Kami menyediakan tim untuk berkonsultasi dengan kebutuhan alat
             elektronik kantor dan lembaga. Kami menawarkan solusi teknologi
             informasi dengan harga yang{" "}
@@ -98,64 +57,50 @@ const Home = () => {
             <span className="font-bold"> kantor</span>.
           </p>
         </div>
-        <div className="max-w-5xl mx-auto xoverflow-x-auto whitespace-nowrap scroll-smooth px-4 sm:px-0">
+        <div className="mx-auto sm:px-0 overflow-x-auto">
           <Gallery>
-            <div className="overflow-x-auto whitespace-nowrap scroll-smooth ">
-              <div className="inline-flex gap-4">
-                {produkList.map((e, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 w-52 sm:w-80 h-64 sm:h-auto overflow-hidden"
+            {/* Bungkus grid di dalam container inline-flex */}
+            <div className="grid grid-cols-3 gap-4 min-w-[600px] sm:min-w-0">
+              {produkList.map((e, index) => (
+                <div
+                  key={index}
+                  className="overflow-hidden hover:shadow-lg transition relative"
+                >
+                  {/* Caption di bawah gambar */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center text-sm font-semibold py-2">
+                    {e.caption}
+                  </div>
+
+                  <Item
+                    original={e.image}
+                    thumbnail={e.image}
+                    width="1200"
+                    height="800"
                   >
-                    <Item
-                      original={e.image}
-                      thumbnail={e.image}
-                      width="1200"
-                      height="800"
-                    >
-                      {({ ref, open }) => (
+                    {({ ref, open }) => (
+                      <div className="cursor-pointer" onClick={open}>
                         <img
                           ref={ref}
-                          onClick={open}
                           src={e.image}
                           alt={`produk-${index}`}
-                          className="w-full h-[400px] object-cover cursor-pointer hover:opacity-80 transition"
+                          className="w-full h-48 object-cover"
                         />
-                      )}
-                    </Item>
-                  </div>
-                ))}
-              </div>
+                      </div>
+                    )}
+                  </Item>
+                </div>
+              ))}
             </div>
           </Gallery>
         </div>
       </section>
-      <section className="pt-6 px-2">
-        {/* <div className="max-w-5xl mx-auto text-center mb-10">
-          <h2 className="text-2xl  capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
-            Pengalaman Kami telah melayani pengadaan alat kantor & teknologi
-            informasi sejak 2002
-          </h2>
-          <p className="mt-4 font-outfit text-gray-600 text-sm sm:text-base max-w-2xl mx-auto ">
-            Dengan pengalaman lebih dari dua dekade, kami telah dipercaya oleh
-            berbagai instansi pemerintah dan perusahaan swasta di berbagai
-            Indonesia.
-          </p>
-        </div> */}
-        <div className="">
-          <PengalamanSlider />
-        </div>
-        <div className="">
-          <PengalamanGaleri />
-        </div>
-      </section>
-      <section className="py-3 px-2">
+      <section className="max-w-5xl mx-auto py-3 px-2">
         <div className="py-12 ">
           <div className="text-center mb-6">
-            <h2 className="text-2xl sm:text-3xl capitalize md:text-4xl font-bold text-black leading-snug">
+            <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
               CV.Kencana Surya telah dipercaya oleh berbagai client
             </h2>
-            <p className="text-gray-500 text-md font-outfit mt-6">
+            <p className="text-gray-500 text-md font-serif sm:mt-4 mt-0 tracking-tight">
               lembaga pemerintahan yang telah bekerja sama dengan kami
             </p>
           </div>
@@ -177,7 +122,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto text-black font-outfit text-sm sm:text-[1em]  leading-relaxed mb-10 text-justify">
+        <div className="max-w-5xl mx-auto text-black font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed mb-10 text-justify">
           <p>
             ratusan lembaga pemerintah dan perusahaan swasta telah mempercayakan
             pengadaan alat-alat kantor mereka kepada perusahaan kami. Kami
@@ -191,9 +136,9 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <section className=" bg-white border-t  border-black px-4">
+      <section className=" bg-white px-4">
         <div className="max-w-5xl mx-auto py-12 bg-white">
-          <h2 className="text-2xl  capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug text-center">
+          <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
             apa yang anda dapat
           </h2>
 
@@ -203,22 +148,22 @@ const Home = () => {
                 key={index}
                 className="flex flex-col items-center text-center p-4 rounded-lg hover:shadow-md transition"
               >
-                <div className="bg-yellow-100 p-3 rounded-full mb-2">
+                <div className="sm:w-fu p-3 rounded-full mb-2">
                   {<item.name size={item.size} className={item.color} />}
                 </div>
-                <p className="text-sm font-medium">{item.title}</p>
+                <p className="text-sm font-serif">{item.title}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section>
-        <div className="border-t border-black pt-12">
+      <section className="max-w-5xl mx-auto ">
+        <div className="pt-12">
           <div className="text-center mb-12 px-4">
-            <h2 className="text-2xl text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug">
+            <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
               Apa Kata Klien Kami
             </h2>
-            <p className="text-gray-600 font-outfit  mt-3  mx-auto">
+            <p className="mx-auto text-gray-800 font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed my-6 text-justify">
               Berikut ini adalah testimoni dari berbagai perusahaan dan klien
               yang telah mempercayakan kebutuhan kantor mereka kepada kami.
             </p>
@@ -244,15 +189,31 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="max-w-5xl my-10  mx-auto">
+          <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
+            Tersedia Pembelian alat elektronik Melalui
+          </h2>
+          <ul className="grid grid-cols-2 sm:flex items-center justify-center space-x-2 gap-2 sm:gap-10">
+            {logoStore.map((e, index) => (
+              <li key={index}>
+                <img
+                  className="sm:w-48  w-36 "
+                  src={e.images}
+                  alt={e.images}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
       <section className="py-12 bg-gray-100 sm:mt-6  px-4 text-justify ">
-        <div className="max-w-5xl mx-auto leading-relaxed">
-          <h2 className="text-2xl md:text-3xl font-extrabold  leading-tight mb-4 text-left">
+        <div className="max-w-5xl mx-auto ">
+          <h2 className="text-2xl font-serif text-left lowercase my-12 sm:text-3xl md:text-4xl font-bold text-black leading-snug">
             Anda butuh alat elektronik atau sistem informasi untuk lembaga anda
             Dan Mau PROMO DISKON BESAR? WA Sekarang! Kesempatan tidak datang 2
             kali!
           </h2>
-          <p className="text-gray-600 font-outfit mb-4 text-left ">
+          <p className=" text-gray-800 font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed mb-10 text-justify">
             Sampaikan kebutuhan alat elektronik Anda kepada Marketing Executive
             Kami melalui WhatsApp atau telpon. Marketing Kami merupakan orang
             yang ahli di bidang pengadaan alat elektronik. Pastikan bertanya ke
@@ -263,7 +224,7 @@ const Home = () => {
             akan melayani Anda dengan sabar. Tersedia pembelian melalui{" "}
             <strong>E Katalog bersertifikat TKDN</strong>.
           </p>
-          <p className="text-gray-600 font-outfit mb-6  text-left">
+          <p className="text-gray-800 font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed mb-10 text-justify">
             Anda hanya perlu telpon/WA untuk melakukan transaksi. Team Kami
             pasti membantu Anda untuk prosesnya. Dijamin Mudah HARGA TERMURAH.
             Selanjutnya Kami kirim dan pasang sampai ke lokasi Anda. Anda duduk
