@@ -12,7 +12,7 @@ export default function WAForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+    <div className="max-w-md mx-auto bg-white p-6  shadow-md">
       <p className="text-center text-sm mb-4 text-gray-700">
         Isi data di bawah ini dan kami akan segera menghubungi Anda via
         WhatsApp.
@@ -24,7 +24,7 @@ export default function WAForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full border rounded px-4 py-2"
+          className="w-full  border border-primary  px-4 py-2"
         />
         <input
           type="tel"
@@ -32,11 +32,11 @@ export default function WAForm() {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           required
-          className="w-full border border-green-500 rounded px-4 py-2"
+          className="w-full border border-primary  px-4 py-2"
         />
         <button
           type="submit"
-          className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded"
+          className="w-full bg-primary hover:bg-red-600 text-white font-semibold py-2"
         >
           Hubungi via WhatsApp
         </button>

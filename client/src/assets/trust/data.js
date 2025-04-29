@@ -15,10 +15,9 @@ import {
 
 export const dataTrust = [
   { image: satu, nama: "garansi 1 tahun" },
-  { image: dua, nama: "harga termurah" },
   { image: tiga, nama: "pembayaran multiplatform" },
   { image: empat, nama: "kualitas terbaik" },
-  { image: lima, nama: "bisa negoisasi" },
+  { image: lima, nama: "Solusi harga terbaik" },
   { image: enam, nama: "kualitas premium" },
 ];
 
@@ -29,12 +28,7 @@ export const keunggulan = [
     color: "text-gray-900",
     title: "Garansi 1 Tahun",
   },
-  {
-    name: BadgeDollarSign,
-    size: 100,
-    color: "text-gray-900",
-    title: "Harga Termurah",
-  },
+
   {
     name: CreditCard,
     size: 100,
@@ -45,7 +39,7 @@ export const keunggulan = [
     name: Handshake,
     size: 100,
     color: "text-gray-900",
-    title: "Bisa Negoisasi",
+    title: "Solusi harga terbaik",
   },
   {
     name: Gem,

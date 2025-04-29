@@ -1,6 +1,7 @@
 // components/CustomerServiceCard.jsx
 import { useState, useEffect } from "react";
 import { X, PhoneCallIcon } from "lucide-react";
+import whatsapp from "../assets/shop/whatsapp.png";
 import cs1 from "../assets/profilecs/cs1.jpg";
 import cs2 from "../assets/profilecs/cs2.svg";
 export default function CustomerServiceCard() {
@@ -19,12 +20,9 @@ export default function CustomerServiceCard() {
       <>
         <button
           onClick={() => setOpen(true)}
-          className="fixed flex items-center space-x-2 rounded-full bottom-10 right-10 p-2 bg-green-600 border border-white"
+          className="fixed bg-white flex items-center space-x-2 rounded-full bottom-10 right-10 p-2 border "
         >
-          <PhoneCallIcon size={15} color="#fff" />
-          <p className="sm:block hidden font-medium text-white text-md">
-            Hubungi Langsung
-          </p>
+          <img className="w-8 object-contain" src={whatsapp} alt="whatsapp.png" />
         </button>
       </>
     );

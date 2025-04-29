@@ -22,7 +22,7 @@ export default function PengalamanGaleri() {
                 <Item
                   original={e.image}
                   thumbnail={e.image}
-                  width="1200"
+                  width="900"
                   height="800"
                 >
                   {({ ref, open }) => (

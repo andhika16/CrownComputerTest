@@ -6,11 +6,13 @@ import Tentang from "./pages/Tentang";
 import Footer from "./components/Footer";
 import RuangLingkupSection from "./pages/RuangLingkupSection";
 import PengalamanSlider from "./pages/PengalamanSlider";
+import Breadcrumbs from "./components/Breadcrumbs";
 function App() {
   return (
     <Router>
       <Header />
-      <main className="mx-auto  py-8">
+      <main className="mx-auto">
+        <Breadcrumbs />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tentang" element={<Tentang />} />

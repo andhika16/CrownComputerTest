@@ -2,60 +2,102 @@ import { useKeenSlider } from "keen-slider/react";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "keen-slider/keen-slider.min.css";
 import "photoswipe/dist/photoswipe.css";
-import { data } from "../assets/products/data";
+import { produkList } from "../assets/testimon/data";
+import Banner from "../components/Banner";
 
 export default function PengalamanSlider() {
-  const [sliderRef] = useKeenSlider({
-    loop: true,
-    slides: {
-      perView: 1,
-      spacing: 12,
-    },
-  });
-
   return (
-    <>
-      {data.map((item, index) => (
-        <section key={index} className="py-6 px-4 bg-white">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center">
+    <section className="max-w-5xl mx-auto sm:px-0 px-4 bg-white">
+      <div className="py-6  ">
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-4xl font-serif text-gray-800">
+            Layanan Pemasangan Profesional untuk Berbagai Alat Elektronik
+          </h2>
+          <p className="mt-4 font-serif text-lg text-gray-600">
+            Kami menyediakan layanan pemasangan dan instalasi untuk berbagai
+            alat elektronik, termasuk{" "}
+            <strong>CCTV, Genset, Server, dan perangkat lainnya</strong>, dengan
+            kualitas terbaik dan dukungan profesional.
+          </p>
+
+          <div className="mx-auto flex py-6 flex-col md:flex-row items-center">
             {/* Slider Foto */}
-            <Gallery>
-              <div ref={sliderRef} className="keen-slider w-full">
-                {item.images.map((img, i) => (
-                  <div key={i} className="keen-slider__slide">
-                    <Item
-                      original={img}
-                      thumbnail={img}
-                      width="1000"
-                      height="800"
-                    >
-                      {({ ref, open }) => (
-                        <img
-                          ref={ref}
-                          onClick={open}
-                          src={img}
-                          alt={`Foto ${i + 1}`}
-                          className="rounded-lg cursor-pointer object-contain w-full h-64 sm:h-80 shadow"
-                        />
-                      )}
-                    </Item>
+            <div className="overflow-x-auto whitespace-nowrap scroll-smooth px-4">
+              <div className="inline-flex gap-4">
+                {produkList.map((e, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-80 h-52  overflow-hidden shadow-md"
+                  >
+                    <img
+                      src={e.image}
+                      alt={`produk-${index}`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 ))}
               </div>
-            </Gallery>
-
-            {/* Caption Tetap */}
-            <div className="md:w-1/2">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                {item.title}
+            </div>
+          </div>  
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 border shadow-md">
+              <h3 className="text-xl font-serif text-gray-800">
+                Pemasangan CCTV
               </h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                {item.desc}
+              <p className="mt-2 font-serif text-gray-600">
+                Keamanan adalah prioritas utama. Kami menawarkan pemasangan CCTV
+                dengan teknologi terbaru untuk memastikan properti Anda aman
+                24/7.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 border shadow-md">
+              <h3 className="text-xl font-serif text-gray-800">
+                Pemasangan Genset
+              </h3>
+              <p className="mt-2 font-serif text-gray-600">
+                Kami juga menyediakan layanan pemasangan genset untuk memastikan
+                kelistrikan di rumah atau bisnis Anda tetap berjalan tanpa
+                gangguan.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 border shadow-md">
+              <h3 className="text-xl font-serif text-gray-800">
+                Pemasangan Server
+              </h3>
+              <p className="mt-2 font-serif text-gray-600">
+                Memastikan sistem server berjalan lancar adalah kunci bisnis
+                yang sukses. Kami menyediakan pemasangan server dengan sistem
+                yang handal dan aman.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 border shadow-md">
+              <h3 className="text-xl font-serif text-gray-800">
+                Pemasangan Alat Elektronik Lainnya
+              </h3>
+              <p className="mt-2 font-serif text-gray-600">
+                Tidak hanya CCTV dan genset, kami juga menghandle pemasangan
+                berbagai alat elektronik lainnya, mulai dari sistem audio hingga
+                perangkat otomatisasi rumah.
               </p>
             </div>
           </div>
-        </section>
-      ))}
-    </>
+
+          <div className="mt-12">
+            <p className="text-lg font-serif text-gray-800">
+              <strong>Kenapa Memilih Kami?</strong>
+              Kami memberikan layanan pemasangan yang cepat, aman, dan efisien.
+              Tim profesional kami siap membantu Anda dengan berbagai perangkat
+              elektronik yang Anda butuhkan.
+            </p>
+            <button className="mt-4 px-6 py-2 bg-primary text-white font-serif  hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              Hubungi Kami untuk Konsultasi Gratis
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

@@ -7,18 +7,19 @@ import logo from "../assets/shop/logo.png";
 import WAForm from "../components/WAForm";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { logoStore } from "../assets/shop/data";
+import EmbeddedMap from "../components/Maps";
 
 const Home = () => {
   return (
     <div className="">
       <Jumbotron />
 
-      <section className="sm:my-6 my-12 sm:px-0 px-4">
-        <div className="max-w-5xl mx-auto mb-6 sm:py-6 ">
-          <h2 className=" text-3xl sm:text-4xl md:text-5xl text-center   font-bold font-serif text-black mb-6 leading-snug">
+      <section className="my-6 sm:px-0 px-4">
+        <div className="max-w-5xl mx-auto mb-6">
+          <h2 className=" text-2xl sm:text-4xl md:text-5xl text-center  font-bold font-serif text-black mb-6 leading-snug">
             Jasa Pengadaan alat elektronik dan sistem informasi
           </h2>
-          <p className="sm:text-[1em] text-sm  text-black tracking-wide   sm:leading-relaxed font-serif text-justify">
+          <p className="sm:text-[1em] text-sm  text-black tracking-wide sm:leading-relaxed font-serif text-justify">
             penyedia solusi pengadaan IT lengkap untuk berbagai{" "}
             <span className="font-bold">instansi pemerintah</span> dan{" "}
             <span className="font-bold">korporat</span>. Mulai dari perangkat
@@ -33,7 +34,7 @@ const Home = () => {
         </div>
       </section>
       <section className="max-w-5xl mx-auto sm:px-0 px-4">
-        <div className="flex justify-center  ">
+        <div className="flex justify-center">
           <div className="mx-auto">
             <div className="">
               <img className="sm:w-64 w-48  mx-auto" src={logo} alt={logo} />
@@ -95,7 +96,7 @@ const Home = () => {
         </div>
       </section>
       <section className="max-w-5xl mx-auto py-3 px-2">
-        <div className="py-12 ">
+        <div className="sm:py-12 ">
           <div className="text-center mb-6">
             <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
               CV.Kencana Surya telah dipercaya oleh berbagai client
@@ -105,7 +106,7 @@ const Home = () => {
             </p>
           </div>
           <div className="bg-white">
-            <div className="grid grid-cols-2 sm:flex sm:justify-center mx-auto ">
+            <div className="grid grid-cols-2 justify-items-center md:grid-cols-4 sm:grid-cols-6  sm:flex sm:justify-center mx-auto ">
               {dataClient.map((e, index) => (
                 <div
                   key={index}
@@ -122,7 +123,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto text-black font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed mb-10 text-justify">
+        <div className="max-w-5xl mx-auto px-4 text-black font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed sm:mb-5 text-justify">
           <p>
             ratusan lembaga pemerintah dan perusahaan swasta telah mempercayakan
             pengadaan alat-alat kantor mereka kepada perusahaan kami. Kami
@@ -142,13 +143,13 @@ const Home = () => {
             apa yang anda dapat
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 mt-6 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-6 justify-items-center">
             {keunggulan.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-center p-4 rounded-lg hover:shadow-md transition"
               >
-                <div className="sm:w-fu p-3 rounded-full mb-2">
+                <div className="p-3 rounded-full mb-2">
                   {<item.name size={item.size} className={item.color} />}
                 </div>
                 <p className="text-sm font-serif">{item.title}</p>
@@ -159,7 +160,7 @@ const Home = () => {
       </section>
       <section className="max-w-5xl mx-auto ">
         <div className="pt-12">
-          <div className="text-center mb-12 px-4">
+          <div className="text-center mb-12 sm:px-0 px-4 ">
             <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
               Apa Kata Klien Kami
             </h2>
@@ -193,11 +194,11 @@ const Home = () => {
           <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
             Tersedia Pembelian alat elektronik Melalui
           </h2>
-          <ul className="grid grid-cols-2 sm:flex items-center justify-center space-x-2 gap-2 sm:gap-10">
+          <ul className="grid grid-cols-2 justify-items-center sm:flex items-center justify-center space-x-2 gap-2 sm:gap-10">
             {logoStore.map((e, index) => (
               <li key={index}>
                 <img
-                  className="sm:w-48  w-36 "
+                  className="sm:w-32  w-36 object-contain"
                   src={e.images}
                   alt={e.images}
                 />
@@ -206,22 +207,20 @@ const Home = () => {
           </ul>
         </div>
       </section>
-      <section className="py-12 bg-gray-100 sm:mt-6  px-4 text-justify ">
-        <div className="max-w-5xl mx-auto ">
+      <section className="bg-gray-100 py-12 ">
+        <div className="max-w-5xl mx-auto sm:mt-6 sm:px-0 px-4 text-justify ">
           <h2 className="text-2xl font-serif text-left lowercase my-12 sm:text-3xl md:text-4xl font-bold text-black leading-snug">
             Anda butuh alat elektronik atau sistem informasi untuk lembaga anda
-            Dan Mau PROMO DISKON BESAR? WA Sekarang! Kesempatan tidak datang 2
-            kali!
+            WA Sekarang!
           </h2>
           <p className=" text-gray-800 font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed mb-10 text-justify">
             Sampaikan kebutuhan alat elektronik Anda kepada Marketing Executive
             Kami melalui WhatsApp atau telpon. Marketing Kami merupakan orang
             yang ahli di bidang pengadaan alat elektronik. Pastikan bertanya ke
             perusahaan pengadaan alat TI dan sistem informasi untuk solusi
-            terbaik. Dan pastikan Anda minta{" "}
-            <strong>HARGA PROMO TERMURAH. </strong>
-            Jangan ragu untuk bertanya kepada Marketing Executive Kami. Kami
-            akan melayani Anda dengan sabar. Tersedia pembelian melalui{" "}
+            terbaik. Dan pastikan Anda minta Jangan ragu untuk bertanya kepada
+            Marketing Executive Kami. Kami akan melayani Anda dengan sabar.
+            Tersedia pembelian melalui{" "}
             <strong>E Katalog bersertifikat TKDN</strong>.
           </p>
           <p className="text-gray-800 font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed mb-10 text-justify">
@@ -234,7 +233,24 @@ const Home = () => {
           </p>
 
           {/* Form Section */}
-          <WAForm />
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-stretch">
+            {/* Map Section */}
+            <div className="w-full md:w-1/2 h-72 md:h-auto">
+              <EmbeddedMap />
+            </div>
+
+            {/* Kontak Section */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center">
+              <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">
+                Kontak Perusahaan
+              </h2>
+              <p className="text-gray-600 font-sans leading-relaxed tracking-wide">
+                Ruko Grand Sungkono Blok C No.9, Jl. Mayor Jenderal Sungkono
+                No.176-178, Dukuh Pakis, Kec.Dukuhpakis, Surabaya, Jawa Timur,
+                Kodepos 60219
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

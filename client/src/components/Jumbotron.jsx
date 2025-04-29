@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useInView } from "react-intersection-observer"; // ⬅️ Tambahkan ini
 import slide1 from "../assets/jumbotron/jumbotronthree.webp";
 import slide2 from "../assets/jumbotron/jumbotronone.webp";
 import slide3 from "../assets/jumbotron/jumbotrontwo.webp";
+
 const slides = [
   {
     image: slide1,
@@ -27,6 +29,11 @@ export default function Jumbotron() {
   const [hovering, setHovering] = useState(false);
   const intervalRef = useRef(null);
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
@@ -36,18 +43,26 @@ export default function Jumbotron() {
   };
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      nextSlide();
-    }, 5000);
+    if (inView) {
+      intervalRef.current = setInterval(() => {
+        nextSlide();
+      }, 5000);
+    }
 
     return () => clearInterval(intervalRef.current);
-  }, []);
+  }, [inView]); // ⬅️ sekarang tergantung inView, bukan cuma sekalip
 
   const slide = slides[currentIndex];
 
+  if (!inView) {
+    // Kalau belum kelihatan di layar, render placeholder
+    return <div ref={ref} className="h-[500px] w-full bg-gray-200"></div>;
+  }
+
   return (
     <div
-      className="relative  h-[500px] w-full overflow-hidden group"
+      ref={ref}
+      className="relative h-[700px] sm:h-[600px] w-full overflow-hidden "
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
@@ -55,7 +70,7 @@ export default function Jumbotron() {
         src={slide.image}
         alt={slide.title}
         loading="lazy"
-        className="w-full h-full object-cover transition-all duration-500"
+        className="w-full h-full  object-cover transition-all duration-500"
       />
       <div className="max-w-4xl mx-auto">
         {/* Overlay content */}
@@ -65,12 +80,11 @@ export default function Jumbotron() {
           <p className="text-lg mb-6 ">{slide.description}</p>
         </div>
 
-        {/* Navigation buttons */}
-        {hovering && (
-          <>
+      {hovering && (
+        <>
             <button
               onClick={prevSlide}
-              className="absolute sm:left-4 left-1 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black p-2 rounded-full shadow transition"
+              className="absolute sm:left-6 left-1 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-black p-2 rounded-full shadow transition"
             >
               <ChevronLeft />
             </button>

@@ -2,9 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    // TODO perbaiki tampilan footer mulai dari warna dan layout
+    // TODO perbaiki layout karena belum sejajar dengan konten dan header
+    
     <footer className="bg-primary text-gray-300 pt-20 mt-10">
-      <div className="max-w-6xl  mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-5xl  mx-auto px-4 sm:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div>
           <h3 className="text-2xl text-white font-bold mb-2">CV. Kencana Surya</h3>
           <p className="text-sm text-white">
