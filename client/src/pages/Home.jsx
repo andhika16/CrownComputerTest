@@ -16,7 +16,7 @@ const Home = () => {
 
       <section className="my-6 sm:px-0 px-4">
         <div className="max-w-5xl mx-auto mb-6">
-          <h2 className=" text-2xl sm:text-4xl md:text-5xl text-center  font-bold font-serif text-black mb-6 leading-snug">
+          <h2 className=" text-xl sm:text-3xl md:text-4xl text-center  font-bold font-serif text-black mb-6 leading-snug">
             Jasa Pengadaan alat elektronik dan sistem informasi
           </h2>
           <p className="sm:text-[1em] text-sm  text-black tracking-wide sm:leading-relaxed font-serif text-justify">
@@ -39,7 +39,7 @@ const Home = () => {
             <div className="">
               <img className="sm:w-64 w-48  mx-auto" src={logo} alt={logo} />
             </div>
-            <h2 className="text-2xl font-serif  text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
+            <h2 className="text-xl font-serif  text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
               Pengalaman Kami telah melayani pengadaan alat kantor & teknologi
               informasi sejak 1998
             </h2>
@@ -98,7 +98,7 @@ const Home = () => {
       <section className="max-w-5xl mx-auto py-3 px-2">
         <div className="sm:py-12 ">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
+            <h2 className="text-xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
               CV.Kencana Surya telah dipercaya oleh berbagai client
             </h2>
             <p className="text-gray-500 text-md font-serif sm:mt-4 mt-0 tracking-tight">
@@ -127,8 +127,10 @@ const Home = () => {
           <p>
             ratusan lembaga pemerintah dan perusahaan swasta telah mempercayakan
             pengadaan alat-alat kantor mereka kepada perusahaan kami. Kami
-            menghadirkan{" "}
-            <span className="font-semibold">harga terbaik se-Indonesia</span>{" "}
+            menghadirkan
+            <span className="font-semibold">
+              harga terbaik se-Indonesia
+            </span>{" "}
             dengan <span className="font-semibold">garansi resmi</span>, dengan
             pelayanan yang ramah dan profesional. sebelum memesan, pastikan Anda
             berkonsultasi dengan pihak yang tepat. Tim kami siap membantu
@@ -139,7 +141,7 @@ const Home = () => {
       </section>
       <section className=" bg-white px-4">
         <div className="max-w-5xl mx-auto py-12 bg-white">
-          <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
+          <h2 className="text-xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
             apa yang anda dapat
           </h2>
 
@@ -161,7 +163,7 @@ const Home = () => {
       <section className="max-w-5xl mx-auto ">
         <div className="pt-12">
           <div className="text-center mb-12 sm:px-0 px-4 ">
-            <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
+            <h2 className="text-xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
               Apa Kata Klien Kami
             </h2>
             <p className="mx-auto text-gray-800 font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed my-6 text-justify">
@@ -169,7 +171,7 @@ const Home = () => {
               yang telah mempercayakan kebutuhan kantor mereka kepada kami.
             </p>
           </div>
-
+          {/* FIXME:perbaiki bagian komen review agar lebih sesuai review secara teknis ct: pelayanana cepat, tim teknis 24/7 dll */}
           <div className="max-w-5xl mx-auto px-4 grid gap-8 sm:grid-cols-2">
             <div className="bg-white shadow-md sm:rounded sm:p-4">
               <p className="text-gray-600 italic mb-4">
@@ -191,14 +193,14 @@ const Home = () => {
           </div>
         </div>
         <div className="max-w-5xl my-10  mx-auto">
-          <h2 className="text-2xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
+          <h2 className="text-xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
             Tersedia Pembelian alat elektronik Melalui
           </h2>
-          <ul className="grid grid-cols-2 justify-items-center sm:flex items-center justify-center space-x-2 gap-2 sm:gap-10">
+          <ul className="grid grid-cols-2 justify-items-center sm:flex items-center sm:pt-0 pt-6 justify-center space-x-2 gap-2 sm:gap-10">
             {logoStore.map((e, index) => (
               <li key={index}>
                 <img
-                  className="sm:w-32  w-36 object-contain"
+                  className="sm:w-32 w-36 object-contain"
                   src={e.images}
                   alt={e.images}
                 />
@@ -207,7 +209,7 @@ const Home = () => {
           </ul>
         </div>
       </section>
-      <section className="bg-gray-100 py-12 ">
+      <section className="bg-gray-100 sm:py-12 py-6 ">
         <div className="max-w-5xl mx-auto sm:mt-6 sm:px-0 px-4 text-justify ">
           <h2 className="text-2xl font-serif text-left lowercase my-12 sm:text-3xl md:text-4xl font-bold text-black leading-snug">
             Anda butuh alat elektronik atau sistem informasi untuk lembaga anda

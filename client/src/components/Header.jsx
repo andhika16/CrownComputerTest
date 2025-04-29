@@ -9,7 +9,7 @@ const Header = () => {
   };
   return (
     <div className="">
-      <div className="bg-primary py-2 px-4">
+      <div className="bg-primary py-2 px-4 ">
         <ul className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center md:justify-end items-start md:items-center gap-2 md:gap-6 text-gray-100 text-xs">
           {/* Alamat */}
           <li className="flex items-center space-x-2 font-serif tracking-wider">

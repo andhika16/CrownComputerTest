@@ -51,10 +51,10 @@ const services = [
 export default function RuangLingkupSection() {
   return (
     <div className="">
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className=" px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
-            Ruang Lingkup Layanan Kami
+            Produk Layananan Kami
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
