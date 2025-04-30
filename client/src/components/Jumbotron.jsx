@@ -50,7 +50,7 @@ export default function Jumbotron() {
     }
 
     return () => clearInterval(intervalRef.current);
-  }, [inView]); // ⬅️ sekarang tergantung inView, bukan cuma sekalip
+  }, [inView]);
 
   const slide = slides[currentIndex];
 
@@ -62,7 +62,7 @@ export default function Jumbotron() {
   return (
     <div
       ref={ref}
-      className="relative h-[700px] sm:h-[600px] w-full overflow-hidden "
+      className="relative h-[400px] sm:h-[500px] w-full overflow-hidden "
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
@@ -75,9 +75,9 @@ export default function Jumbotron() {
       <div className="max-w-4xl mx-auto">
         {/* Overlay content */}
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-10 md:px-20 text-white">
-          <h2 className="text-5xl  font-bold mb-4">{slide.title}</h2>
+          <h2 className="text-5xl  font-serif mb-4">{slide.title}</h2>
           
-          <p className="text-lg mb-6 ">{slide.description}</p>
+          <p className="text-lg font-serif tracking-wide mb-6 ">{slide.description}</p>
         </div>
 
       {hovering && (

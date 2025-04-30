@@ -4,7 +4,7 @@ import CustomerServiceCard from "./components/CustomerServiceCard";
 import Home from "./pages/Home";
 import Tentang from "./pages/Tentang";
 import Footer from "./components/Footer";
-import RuangLingkupSection from "./pages/RuangLingkupSection";
+import Product from "./pages/Product";
 import PengalamanSlider from "./pages/PengalamanSlider";
 import Breadcrumbs from "./components/Breadcrumbs";
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tentang" element={<Tentang />} />
-          <Route path="/produk" element={<RuangLingkupSection />} />
+          <Route path="/produk" element={<Product />} />
           <Route path="/pengalaman" element={<PengalamanSlider />} />
         </Routes>
       </main>

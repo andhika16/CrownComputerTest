@@ -4,23 +4,23 @@ import { produkList } from "../assets/testimon/data";
 import { dataClient } from "../assets/clients/data";
 import { keunggulan } from "../assets/trust/data";
 import logo from "../assets/shop/logo.png";
-import WAForm from "../components/WAForm";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { logoStore } from "../assets/shop/data";
 import EmbeddedMap from "../components/Maps";
+import Testimonials from "../components/Testimonial";
 
 const Home = () => {
   return (
     <div className="">
       <Jumbotron />
 
-      <section className="my-6 sm:px-0 px-4">
-        <div className="max-w-5xl mx-auto mb-6">
+      <section className="my-12 sm:px-0 px-4">
+        <div className="max-w-5xl mx-auto ">
           <h2 className=" text-xl sm:text-3xl md:text-4xl text-center  font-bold font-serif text-black mb-6 leading-snug">
             Jasa Pengadaan alat elektronik dan sistem informasi
           </h2>
           <p className="sm:text-[1em] text-sm  text-black tracking-wide sm:leading-relaxed font-serif text-justify">
-            penyedia solusi pengadaan IT lengkap untuk berbagai{" "}
+            Jasa Pengadaan alat elektronik dan sistem informasi untuk berbagai{" "}
             <span className="font-bold">instansi pemerintah</span> dan{" "}
             <span className="font-bold">korporat</span>. Mulai dari perangkat
             keras hingga sistem informasi yang disesuaikan dengan kebutuhan{" "}
@@ -36,7 +36,7 @@ const Home = () => {
       <section className="max-w-5xl mx-auto sm:px-0 px-4">
         <div className="flex justify-center">
           <div className="mx-auto">
-            <div className="">
+            <div className="mb-6">
               <img className="sm:w-64 w-48  mx-auto" src={logo} alt={logo} />
             </div>
             <h2 className="text-xl font-serif  text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
@@ -46,11 +46,10 @@ const Home = () => {
           </div>
         </div>
         <div className="mx-auto text-center mb-6 mt-6">
-          <p className="sm:text-[1em] text-sm  text-black tracking-wide  leading-relaxed font-serif text-justify">
-            Kami menyediakan tim untuk berkonsultasi dengan kebutuhan alat
-            elektronik kantor dan lembaga. Kami menawarkan solusi teknologi
-            informasi dengan harga yang{" "}
-            <span className="font-bold">terjangkau </span>
+          <p className="sm:text-[1em] text-sm  text-black tracking-wide   leading-relaxed font-serif text-justify">
+            Pengalaman Kami telah melayani pengadaan alat kantor & teknologi
+            selama 2 dekade. Kami menawarkan solusi teknologi informasi dengan
+            harga yang <span className="font-bold">terjangkau </span>
             dan layanan yang profesional{" "}
             <span className="font-bold">di indonesia</span> . Mulai dari
             perangkat komputer, alat jaringan dan peralatan kantor, kami siap
@@ -61,7 +60,7 @@ const Home = () => {
         <div className="mx-auto sm:px-0 overflow-x-auto">
           <Gallery>
             {/* Bungkus grid di dalam container inline-flex */}
-            <div className="grid grid-cols-3 gap-4 min-w-[600px] sm:min-w-0">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 min-w-[600px] sm:min-w-0">
               {produkList.map((e, index) => (
                 <div
                   key={index}
@@ -95,7 +94,7 @@ const Home = () => {
           </Gallery>
         </div>
       </section>
-      <section className="max-w-5xl mx-auto py-3 px-2">
+      <section className="max-w-5xl mx-auto mt-14 px-2">
         <div className="sm:py-12 ">
           <div className="text-center mb-6">
             <h2 className="text-xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
@@ -125,13 +124,12 @@ const Home = () => {
 
         <div className="max-w-5xl mx-auto px-4 text-black font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed sm:mb-5 text-justify">
           <p>
-            ratusan lembaga pemerintah dan perusahaan swasta telah mempercayakan
-            pengadaan alat-alat kantor mereka kepada perusahaan kami. Kami
-            menghadirkan
+            cv.kencana surya telah bekerjasama dengan lembaga pemerintah untuk
+            alat pengadaan barang dengan menghadirkan
             <span className="font-semibold">
               harga terbaik se-Indonesia
             </span>{" "}
-            dengan <span className="font-semibold">garansi resmi</span>, dengan
+            dan <span className="font-semibold">garansi resmi</span>, dengan
             pelayanan yang ramah dan profesional. sebelum memesan, pastikan Anda
             berkonsultasi dengan pihak yang tepat. Tim kami siap membantu
             memilih solusi terbaik sesuai kebutuhan. Hubungi kami hari ini dan
@@ -172,25 +170,7 @@ const Home = () => {
             </p>
           </div>
           {/* FIXME:perbaiki bagian komen review agar lebih sesuai review secara teknis ct: pelayanana cepat, tim teknis 24/7 dll */}
-          <div className="max-w-5xl mx-auto px-4 grid gap-8 sm:grid-cols-2">
-            <div className="bg-white shadow-md sm:rounded sm:p-4">
-              <p className="text-gray-600 italic mb-4">
-                "Pelayanan cepat dan profesional! alat yang kami beli sampai
-                tepat waktu dan langsung bisa digunakan untuk proyek konstruksi
-                besar kami."
-              </p>
-              <p className="font-semibold text-gray-800 ">Hartono suswanto</p>
-              <p className="text-sm text-gray-500">Instansi Pemerintah</p>
-            </div>
-            <div className="bg-white shadow-md sm:rounded sm:p-4">
-              <p className="text-gray-600 italic mb-4">
-                "Harga terbaik yang kami temukan setelah membandingkan banyak
-                vendor. Garansi jelas dan tim support-nya sangat membantu."
-              </p>
-              <p className="font-semibold text-gray-800">Syamsul</p>
-              <p className="text-sm text-gray-500">Instansi Pemerintah</p>
-            </div>
-          </div>
+          <Testimonials />
         </div>
         <div className="max-w-5xl my-10  mx-auto">
           <h2 className="text-xl font-serif text-center capitalize sm:text-3xl md:text-4xl font-bold text-black leading-snug ">
@@ -209,8 +189,8 @@ const Home = () => {
           </ul>
         </div>
       </section>
-      <section className="bg-gray-100 sm:py-12 py-6 ">
-        <div className="max-w-5xl mx-auto sm:mt-6 sm:px-0 px-4 text-justify ">
+      <section className="bg-gray-100 sm:py-12 py-6 mx-4">
+        <div className="max-w-5xl mx-auto sm:mt-6  px-4 text-justify ">
           <h2 className="text-2xl font-serif text-left lowercase my-12 sm:text-3xl md:text-4xl font-bold text-black leading-snug">
             Anda butuh alat elektronik atau sistem informasi untuk lembaga anda
             WA Sekarang!
@@ -235,9 +215,9 @@ const Home = () => {
           </p>
 
           {/* Form Section */}
-          <div className="flex flex-col md:flex-row gap-8 items-start md:items-stretch">
+          <div className="flex flex-col sm:flex-row gap-8 items-start  px-4">
             {/* Map Section */}
-            <div className="w-full md:w-1/2 h-72 md:h-auto">
+            <div className="w-full md:w-1/2 h-72 md:h-auto mb-24">
               <EmbeddedMap />
             </div>
 

@@ -8,7 +8,7 @@ export default function Breadcrumbs() {
   const pathnames = location.pathname.split("/").filter((x) => x);
   if (location.pathname === "/") return null;
   return (
-    <nav className="max-w-5xl mx-auto flex items-center  py-4">
+    <nav className="max-w-5xl mx-auto p-4 flex items-center  ">
       <Link to="/" className="text-blue-600 font-serif hover:underline">
         Home
       </Link>

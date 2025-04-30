@@ -10,21 +10,21 @@ const Header = () => {
   return (
     <div className="">
       <div className="bg-primary py-2 px-4 ">
-        <ul className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center md:justify-end items-start md:items-center gap-2 md:gap-6 text-gray-100 text-xs">
+        <ul className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-center md:justify-end items-start md:items-center gap-2 sm:gap-6 text-gray-100 text-xs">
           {/* Alamat */}
-          <li className="flex items-center space-x-2 font-serif tracking-wider">
+          <li className="flex items-center space-x-2 font-outfit tracking-wider">
             <LocationEdit size={18} />
             <p>Mayjen Sungkono No.C7 Grand Sungkono</p>
           </li>
 
           {/* Telepon */}
-          <li className="flex items-center space-x-2 font-roboto font-semibold tracking-wider">
+          <li className="flex items-center space-x-2 font-outfit font-semibold tracking-wider">
             <PhoneCall size={18} />
             <p>+62853-30320</p>
           </li>
 
           {/* Email */}
-          <li className="flex items-center space-x-2 font-serif tracking-wider">
+          <li className="flex items-center space-x-2 font-outfit tracking-wider">
             <MailCheck size={18} />
             <p>Kencasurya@kencanasurya.com</p>
           </li>
@@ -32,7 +32,7 @@ const Header = () => {
       </div>
 
       <header className="max-w-5xl mx-auto">
-        <nav className="sm:py-4 flex  items-end sm:items-center justify-between mx-auto p-3">
+        <nav className="sm:py-4 py-8 flex  items-end sm:items-center justify-between mx-auto px-3">
           {/* Logo & Brand */}
           <Link to="/">
             <div className="flex items-center gap-2">

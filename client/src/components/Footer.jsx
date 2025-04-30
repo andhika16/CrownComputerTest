@@ -5,7 +5,7 @@ const Footer = () => {
     
     
     <footer className="bg-primary text-gray-300 pt-20 mt-10">
-      <div className="max-w-5xl justify-items-center  mx-auto px-4 sm:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-5xl sm:justify-items-center  mx-auto px-4 sm:px-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         <div>
           <h3 className="text-2xl text-white font-bold mb-2">CV. Kencana Surya</h3>
           <p className="text-sm text-white">
