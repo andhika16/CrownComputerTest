@@ -50,7 +50,7 @@ export default function CustomerServiceCard() {
           />
           <div className="flex-1">
             <div className="font-semibold">{cs.name}</div>
-            <div className="text-sm text-gray-500"> <span className="bg-green-500  rounded-full p-2 py-0 ">.</span> Online</div>
+            <div className="text-sm text-gray-500"> <span className="bg-green-500  rounded-full px-1 py-0 ">.</span> Online</div>
             <div className="text-xs text-red-500">Available</div>
           </div>
           <a

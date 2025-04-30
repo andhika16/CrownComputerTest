@@ -1,69 +1,69 @@
 import React, { useState } from "react";
 import logo from "../assets/shop/logo.png";
-import { Menu, X, LocationEdit, PhoneCall, MailCheck } from "lucide-react"; // Icon gratis dari lucide
+import { Menu, X, LocationEdit, PhoneCall, MailCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
+
   return (
-    <div className="">
-      <div className="bg-primary py-2 px-4 ">
-        <ul className="max-w-5xl mx-auto flex flex-col sm:flex-row justify-center md:justify-end items-start md:items-center gap-2 sm:gap-6 text-gray-100 text-xs">
-          {/* Alamat */}
-          <li className="flex items-center space-x-2 font-outfit tracking-wider">
-            <LocationEdit size={18} />
-            <p>Mayjen Sungkono No.C7 Grand Sungkono</p>
+    <div className="w-full">
+      {/* Bagian info kontak atas */}
+      <div className="bg-primary px-4 py-2">
+        <ul className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center md:justify-end items-start md:items-center gap-2 md:gap-6 text-white text-xs md:text-sm">
+          <li className="flex items-center space-x-2 font-outfit">
+            <LocationEdit size={16} />
+            <span className="truncate">
+              Mayjen Sungkono No.C7 Grand Sungkono
+            </span>
           </li>
-
-          {/* Telepon */}
-          <li className="flex items-center space-x-2 font-outfit font-semibold tracking-wider">
-            <PhoneCall size={18} />
-            <p>+62853-30320</p>
+          <li className="flex items-center space-x-2 font-outfit font-semibold">
+            <PhoneCall size={16} />
+            <span>+62853-30320</span>
           </li>
-
-          {/* Email */}
-          <li className="flex items-center space-x-2 font-outfit tracking-wider">
-            <MailCheck size={18} />
-            <p>Kencasurya@kencanasurya.com</p>
+          <li className="flex items-center space-x-2 font-outfit">
+            <MailCheck size={16} />
+            <span className="truncate">Kencasurya@kencanasurya.com</span>
           </li>
         </ul>
       </div>
 
-      <header className="max-w-5xl mx-auto">
-        <nav className="sm:py-4 py-8 flex  items-end sm:items-center justify-between mx-auto px-3">
-          {/* Logo & Brand */}
-          <Link to="/">
+      {/* Navigasi utama */}
+      <header className="bg-white shadow-sm sticky top-0 z-50">
+        <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4 relative">
+          {/* Logo */}
+          <Link to="/" onClick={handleLinkClick}>
             <div className="flex items-center gap-2">
-              <img
-                src={logo}
-                alt="Kencana Surya Logo"
-                className="w-10 sm:w-16 object-contain"
-              />
-              <span className="sm:block hidden text-md sm:text-sm  pt-2 font-serif  text-primary uppercase  ">
+              <img src={logo} alt="Kencana Surya Logo" className="w-14" />
+              <span className="hidden sm:inline-block text-primary font-serif uppercase text-sm tracking-wide">
                 Kencana Surya
               </span>
             </div>
           </Link>
 
+          {/* Tombol menu mobile */}
           <button
-            className="sm:hidden  block text-primary"
+            className="sm:hidden text-primary"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
+          {/* Navigasi menu */}
           <ul
-            className={`flex-col z-50 md:flex-row md:flex space-y-3 md:space-y-0 md:space-x-4 text-sm md:text-base text-slate-900 font-serif absolute md:static top-[130px] left-0 w-full md:w-auto bg-white md:bg-transparent md:p-0 shadow md:shadow-none transition-all duration-300 ${
-              menuOpen ? "flex" : "hidden"
+            className={`absolute sm:static font-serif top-full left-0 w-full sm:w-auto bg-white sm:bg-transparent flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-0 transition-all duration-300 ${
+              menuOpen ? "flex z-40 " : "hidden sm:flex"
             }`}
           >
             <li>
               <Link
                 to="/"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-secondary"
+                className="text-primary hover:text-secondary transition"
               >
                 Beranda
               </Link>
@@ -72,7 +72,7 @@ const Header = () => {
               <Link
                 to="/tentang"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-secondary"
+                className="text-primary hover:text-secondary transition"
               >
                 Tentang
               </Link>
@@ -81,7 +81,7 @@ const Header = () => {
               <Link
                 to="/produk"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-secondary"
+                className="text-primary hover:text-secondary transition"
               >
                 Produk
               </Link>
@@ -90,7 +90,7 @@ const Header = () => {
               <Link
                 to="/pengalaman"
                 onClick={handleLinkClick}
-                className="text-primary hover:text-secondary"
+                className="text-primary hover:text-secondary transition"
               >
                 Pemasangan
               </Link>
