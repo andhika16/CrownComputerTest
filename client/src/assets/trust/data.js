@@ -24,26 +24,26 @@ export const dataTrust = [
 export const keunggulan = [
   {
     name: ShieldCheck,
-    size: 100,
+    size: 50,
     color: "text-gray-900",
     title: "Garansi 1 Tahun",
   },
 
   {
     name: CreditCard,
-    size: 100,
+    size: 50,
     color: "text-gray-900",
     title: "Pembayaran multiplatform",
   },
   {
     name: Handshake,
-    size: 100,
+    size: 50,
     color: "text-gray-900",
     title: "Solusi harga terbaik",
   },
   {
     name: Gem,
-    size: 100,
+    size: 50,
     color: "text-gray-900",
     title: "Kualitas Premium",
   },
