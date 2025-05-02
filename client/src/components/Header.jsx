@@ -14,18 +14,18 @@ const Header = () => {
     <div className="w-full">
       {/* Bagian info kontak atas */}
       <div className="bg-primary px-4 py-2">
-        <ul className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center md:justify-end items-start md:items-center gap-2 md:gap-6 text-white text-xs md:text-sm">
-          <li className="flex items-center space-x-2 font-outfit">
+        <ul className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center md:justify-end items-start md:items-center gap-2 md:gap-6 text-white text-xs md:text-sm">
+          <li className="flex items-center space-x-2 tracking-tighter">
             <LocationEdit size={16} />
             <span className="truncate">
               Mayjen Sungkono No.C7 Grand Sungkono
             </span>
           </li>
-          <li className="flex items-center space-x-2 font-outfit font-semibold">
+          <li className="flex items-center space-x-2 tracking-tighter font-semibold">
             <PhoneCall size={16} />
             <span>+62853-30320</span>
           </li>
-          <li className="flex items-center space-x-2 font-outfit">
+          <li className="flex items-center space-x-2 tracking-tighter">
             <MailCheck size={16} />
             <span className="truncate">Kencasurya@kencanasurya.com</span>
           </li>
@@ -34,7 +34,7 @@ const Header = () => {
 
       {/* Navigasi utama */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4 relative">
+        <nav className="max-w-5xl mx-auto flex items-center justify-between px-4 py-4 relative">
           {/* Logo */}
           <Link to="/" onClick={handleLinkClick}>
             <div className="flex items-center gap-2">

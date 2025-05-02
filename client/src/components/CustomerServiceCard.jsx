@@ -6,20 +6,21 @@ import cs1 from "../assets/profilecs/cs1.jpg";
 import cs2 from "../assets/profilecs/cs2.svg";
 
 export default function CustomerServiceCard() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 3000);
+    const timer = setTimeout(() => setOpen(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
   if (!open) {
     return (
       <button
-        onClick={() => setOpen(true)}
-        className="fixed bottom-10 right-10 bg-white border shadow-md rounded-full p-3 flex items-center space-x-2 hover:shadow-lg transition"
+        onClick={() => setOpen(false)}
+        className="fixed bottom-10 right-10 border bg-white shadow-lg rounded-full p-3 flex items-center space-x-2 hover:shadow-lg transition"
       >
         <img src={whatsapp} alt="whatsapp" className="w-6 h-6 object-contain" />
+        <p className="font-serif text-md tracking-wide"> Hubungi sekarang</p>
   </button>       
     );
   }
@@ -50,14 +51,14 @@ export default function CustomerServiceCard() {
           />
           <div className="flex-1">
             <div className="font-semibold">{cs.name}</div>
-            <div className="text-sm text-gray-500"> <span className="bg-green-500  rounded-full px-1 py-0 ">.</span> Online</div>
-            <div className="text-xs text-red-500">Available</div>
+            <div className="text-sm text-gray-500">  online</div>
+            <div className="text-xs text-green-500">Available</div>
           </div>
           <a
             href="https://wa.me/6285231198475"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-600 hover:text-red-800 transition"
+            className="text-green-600 hover:text-green-800 transition"
           >
             <PhoneCallIcon size={20} />
           </a>

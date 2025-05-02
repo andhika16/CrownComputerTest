@@ -45,8 +45,8 @@ const Home = () => {
             </h2>
           </div>
         </div>
-        <div className="mx-auto text-center mb-6 mt-6">
-          <p className="sm:text-[1em] text-sm  text-black tracking-wide   leading-relaxed font-serif text-justify">
+        <div className="mx-auto  mb-6 mt-6">
+          <p className="sm:text-[1em] text-sm  text-black tracking-wide   leading-relaxed font-serif text-center sm:text-justify ">
             Pengalaman Kami telah melayani pengadaan alat kantor & teknologi
             selama 2 dekade. Kami menawarkan solusi teknologi informasi dengan
             harga yang <span className="font-bold">terjangkau </span>
@@ -60,7 +60,7 @@ const Home = () => {
         <div className="mx-auto sm:px-0 overflow-x-auto">
           <Gallery>
             {/* Bungkus grid di dalam container inline-flex */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 min-w-[600px] sm:min-w-0">
+            <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 min-w-max sm:min-w-0">
               {produkList.map((e, index) => (
                 <div
                   key={index}
@@ -169,7 +169,6 @@ const Home = () => {
               yang telah mempercayakan kebutuhan kantor mereka kepada kami.
             </p>
           </div>
-          {/* FIXME:perbaiki bagian komen review agar lebih sesuai review secara teknis ct: pelayanana cepat, tim teknis 24/7 dll */}
           <Testimonials />
         </div>
         <div className="max-w-5xl my-10  mx-auto">
@@ -215,7 +214,7 @@ const Home = () => {
           </p>
 
           {/* Form Section */}
-          <div className="flex flex-col sm:flex-row gap-8 items-start  px-4">
+          <div className="flex flex-col sm:flex-row gap-8 items-start sm:px-0 px-4">
             {/* Map Section */}
             <div className="w-full md:w-1/2 h-72 md:h-auto mb-24">
               <EmbeddedMap />
@@ -226,7 +225,7 @@ const Home = () => {
               <h2 className="text-2xl font-serif font-semibold text-gray-800 mb-4">
                 Kontak Perusahaan
               </h2>
-              <p className="text-gray-600 font-sans leading-relaxed tracking-wide">
+              <p className="text-gray-600 text-sm font-serif leading-relaxed tracking-wide">
                 Ruko Grand Sungkono Blok C No.9, Jl. Mayor Jenderal Sungkono
                 No.176-178, Dukuh Pakis, Kec.Dukuhpakis, Surabaya, Jawa Timur,
                 Kodepos 60219
