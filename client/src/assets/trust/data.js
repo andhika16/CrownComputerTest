@@ -6,9 +6,7 @@ import lima from "./negotiable-sm.png";
 import enam from "./premium-quality-sm.png";
 import {
   ShieldCheck,
-  BadgeDollarSign,
   CreditCard,
-  Star,
   Handshake,
   Gem,
 } from "lucide-react";

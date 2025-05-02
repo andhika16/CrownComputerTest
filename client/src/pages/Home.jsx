@@ -19,7 +19,7 @@ const Home = () => {
           <h2 className=" text-xl sm:text-3xl md:text-4xl text-center  font-bold font-serif text-black mb-6 leading-snug">
             Jasa Pengadaan alat elektronik dan sistem informasi
           </h2>
-          <p className="sm:text-[1em] text-sm  text-black tracking-wide sm:leading-relaxed font-serif text-justify">
+          <p className="sm:text-[1em] text-sm  text-black tracking-wide sm:leading-relaxed font-serif text-center sm:text-justify">
             Jasa Pengadaan alat elektronik dan sistem informasi untuk berbagai{" "}
             <span className="font-bold">instansi pemerintah</span> dan{" "}
             <span className="font-bold">korporat</span>. Mulai dari perangkat
@@ -122,7 +122,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 text-black font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed sm:mb-5 text-justify">
+        <div className="max-w-5xl mx-auto px-4 text-black font-serif text-sm sm:text-[1em] tracking-wide leading-relaxed sm:mb-5 text-center sm:text-justify">
           <p>
             cv.kencana surya telah bekerjasama dengan lembaga pemerintah untuk
             alat pengadaan barang dengan menghadirkan

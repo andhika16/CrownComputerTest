@@ -14,32 +14,44 @@ const Header = () => {
     <div className="w-full">
       {/* Bagian info kontak atas */}
       <div className="bg-primary px-4 py-2">
-        <ul className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center md:justify-end items-start md:items-center gap-2 md:gap-6 text-white text-xs md:text-sm">
-          <li className="flex items-center space-x-2 tracking-tighter">
-            <LocationEdit size={16} />
-            <span className="truncate">
-              Mayjen Sungkono No.C7 Grand Sungkono
-            </span>
-          </li>
-          <li className="flex items-center space-x-2 tracking-tighter font-semibold">
+        <ul className="max-w-5xl mx-auto flex flex-col font-thin md:flex-row justify-center md:justify-end items-start md:items-center gap-2 md:gap-6 text-white text-xs md:text-sm">
+          <li className="flex items-center space-x-2 tracking-wide">
             <PhoneCall size={16} />
-            <span>+62853-30320</span>
+            <a
+              href="https://wa.me/6289678808764"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>+62896-7880-8764</span>
+            </a>
           </li>
-          <li className="flex items-center space-x-2 tracking-tighter">
+          <li className="flex items-center space-x-2 tracking-wide">
             <MailCheck size={16} />
-            <span className="truncate">Kencasurya@kencanasurya.com</span>
+            <span className="truncate">kencanasuryasby@gmail.com</span>
+          </li>
+          <li className="flex items-center space-x-2 tracking-wide">
+            <LocationEdit size={16} />
+            <a
+              href="https://maps.app.goo.gl/me9RMngGJeRj7utj7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="truncate">
+                Ruko Grand Sungkono Blok C No.9, Jl.Mayor Jenderal Sungkono
+              </span>
+            </a>
           </li>
         </ul>
       </div>
 
       {/* Navigasi utama */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <nav className="max-w-5xl mx-auto flex items-center justify-between px-4 py-4 relative">
+        <nav className="max-w-5xl mx-auto flex justify-between px-4 py-4 relative">
           {/* Logo */}
           <Link to="/" onClick={handleLinkClick}>
             <div className="flex items-center gap-2">
               <img src={logo} alt="Kencana Surya Logo" className="w-14" />
-              <span className="hidden sm:inline-block text-primary font-serif uppercase text-sm tracking-wide">
+              <span className="sm:inline-block text-primary font-serif uppercase text-sm tracking-wide">
                 Kencana Surya
               </span>
             </div>
