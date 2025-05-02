@@ -16,12 +16,12 @@ export default function CustomerServiceCard() {
   if (!open) {
     return (
       <button
-        onClick={() => setOpen(false)}
+        onClick={() => setOpen(true)}
         className="fixed bottom-10 right-10 border bg-white shadow-lg rounded-full p-3 flex items-center space-x-2 hover:shadow-lg transition"
       >
         <img src={whatsapp} alt="whatsapp" className="w-6 h-6 object-contain" />
         <p className="font-serif text-md tracking-wide"> Hubungi sekarang</p>
-  </button>       
+      </button>
     );
   }
 
@@ -29,7 +29,9 @@ export default function CustomerServiceCard() {
     <div className="fixed bottom-4 right-4 z-50 w-80 shadow-xl rounded-xl overflow-hidden border bg-white">
       {/* Header */}
       <div className="bg-green-600 text-white p-4 relative">
-        <p className="text-sm font-medium">Konsultasi Gratis! Hubungi Sekarang!</p>
+        <p className="text-sm font-medium">
+          Konsultasi Gratis! Hubungi Sekarang!
+        </p>
         <button
           onClick={() => setOpen(false)}
           className="absolute top-2 right-2 p-1 rounded hover:bg-green-700 transition"
@@ -39,7 +41,10 @@ export default function CustomerServiceCard() {
       </div>
 
       {/* Customer List */}
-      {[{ name: "Rohul", img: cs1 }, { name: "Novie", img: cs2 }].map((cs, index) => (
+      {[
+        { name: "Rohul", img: cs1 },
+        { name: "Novie", img: cs2 },
+      ].map((cs, index) => (
         <div
           key={index}
           className="flex items-center gap-4 px-4 py-3 border-t hover:bg-gray-50 transition"
@@ -51,7 +56,7 @@ export default function CustomerServiceCard() {
           />
           <div className="flex-1">
             <div className="font-semibold">{cs.name}</div>
-            <div className="text-sm text-gray-500">  online</div>
+            <div className="text-sm text-gray-500"> online</div>
             <div className="text-xs text-green-500">Available</div>
           </div>
           <a

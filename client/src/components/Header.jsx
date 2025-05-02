@@ -50,7 +50,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" onClick={handleLinkClick}>
             <div className="flex items-center gap-2">
-              <img src={logo} alt="Kencana Surya Logo" className="w-14" />
+              <img src={logo} alt="Kencana Surya Logo" className="w-16" />
               <span className="sm:inline-block text-primary font-serif uppercase text-sm tracking-wide">
                 Kencana Surya
               </span>

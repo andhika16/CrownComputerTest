@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-primary text-gray-300 pt-20 mt-10 px-8">
@@ -17,34 +17,50 @@ const Footer = () => {
           <h4 className="text-white font-semibold mb-2">Navigasi</h4>
           <ul className="space-y-6 text-sm text-white">
             <li>
-              <a href="#" className="hover:text-gray-400">
+              <Link
+                to="/"
+            
+                className="text-white hover:text-secondary transition"
+              >
                 Beranda
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">
+              <Link
+                to="/produk"
+            
+                className="text-white hover:text-secondary transition"
+              >
                 Produk
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">
-                Proyek
-              </a>
+              <Link
+                to="/pengalaman"
+            
+                className="text-white hover:text-secondary transition"
+              >
+                Pemasangan
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">
-                Tentang Kami
-              </a>
+              <Link
+                to="/tentang"
+            
+                className="text-white hover:text-secondary transition"
+              >
+                Tentang
+              </Link>
             </li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-white font-semibold mb-2">Kontak</h4>
-          <ul className="space-y-6 text-sm text-white">
-            <li>📍 Surabaya, Indonesia</li>
-            <li>📞 0812-3456-7890</li>
-            <li>✉️ info@kencanasurya.co.id</li>
+          <ul className="space-y-3 text-sm text-white tracking-tight">
+            <li>📍 Ruko Grand Sungkono Blok C No. 9</li>
+            <li>📞 +62896-7880-8764</li>
+            <li>✉️ kencanasuryasby@gmail.com</li>
           </ul>
         </div>
 
